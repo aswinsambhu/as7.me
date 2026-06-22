@@ -1,17 +1,17 @@
 const profile = {
   name: "Aswin Sambhu",
-  handle: "@aswin_sambhu",
+  handle: "@aswinsambhu",
   birthday: "2008-12-01T00:00:00",
-  about: "A classic-profile home base for gaming, links, experiments, and stylish internet fingerprints. Clean, cinematic, retro, and made to be edited anytime.",
+  about: "My name is Aswin Sambhu . I'm good at gaming you know ? . Kidding! I'm a student .",
   links: [
-    { label: "Instagram", tag: "Photos", url: "https://instagram.com/" },
+    { label: "Instagram", tag: "Find me !", url: "https://www.instagram.com/aswinsambhu?igsh=MXIyNmF3bmljYWZzeQ==" },
     { label: "YouTube", tag: "Videos", url: "https://youtube.com/" },
     { label: "Discord", tag: "Squad", url: "https://discord.com/" },
     { label: "GitHub", tag: "Code", url: "https://github.com/" },
     { label: "Steam", tag: "Games", url: "https://store.steampowered.com/" },
     { label: "Portfolio", tag: "Work", url: "#" },
-    { label: "Contact", tag: "Ping", url: "mailto:hello@example.com" },
-    { label: "Playlist", tag: "No sound here", url: "#" }
+    { label: "Contact", tag: "Ping", url: "mailto:aswin08bkm@gmail.com" },
+    { label: "Playlist", tag: "Nothing !", url: "#" }
   ],
   missions: [
     "Cruise through a Vice City style sunset without touching the sidewalk.",
