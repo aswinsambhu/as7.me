@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aswin Sambhu | Retro Profile Arcade</title>
+  <meta name="description" content="A retro classic profile website for Aswin Sambhu with links, gaming profile, mini games, easter eggs, and a cinematic loading screen.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="loader" id="loader" aria-label="Loading Aswin Sambhu profile">
+    <video id="loaderVideo" class="loader-video" src="logovid.mp4" autoplay muted playsinline preload="auto"></video>
+    <div class="loader-scan"></div>
+    <div class="loader-hud">
+      <span>Booting classic mode</span>
+      <strong id="loaderPercent">00%</strong>
+    </div>
+    <button class="loader-skip" id="skipLoader" type="button">Enter</button>
+  </div>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Aswin Sambhu home">Aswin Sambhu</a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#bio">Bio</a>
+      <a href="#links">Links</a>
+      <a href="#games">Games</a>
+      <a href="#arcade">Arcade</a>
+      <a href="#easter">Secrets</a>
+    </nav>
+    <button class="menu-button" id="menuButton" type="button" aria-label="Toggle menu">Menu</button>
+  </header>
+
+  <main id="home">
+    <section class="hero section reveal">
+      <div class="hero-copy">
+        <p class="eyebrow">Classic profile cartridge / Player one loaded</p>
+        <h1>Aswin Sambhu</h1>
+        <p class="tagline">Retro links, gaming stats, movie nods, arcade chaos, and a little mystery tucked under the hood.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#arcade">Play mini games</a>
+          <a class="button" href="#links">Open links</a>
+        </div>
+      </div>
+
+      <div class="profile-console" aria-label="Profile console">
+        <div class="console-lights" aria-hidden="true"><span></span><span></span><span></span></div>
+        <img src="bg.png.png" alt="Aswin Sambhu profile emblem" class="profile-img">
+        <div class="status-board">
+          <span>Handle</span><strong id="handleText">@aswin_sambhu</strong>
+          <span>Mode</span><strong>Classic / Clean</strong>
+          <span>Wanted level</span><strong id="wantedLevel">1 star</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="marquee-strip" aria-label="Retro references">
+      <div class="marquee-track">
+        <span>Vice City sunset drive</span>
+        <span>San Andreas back-road chase</span>
+        <span>VHS rewind energy</span>
+        <span>Old theater balcony seat</span>
+        <span>Cheat code ready</span>
+        <span>Arcade cabinet unlocked</span>
+      </div>
+    </section>
+
+    <section class="section bio-grid reveal" id="bio">
+      <div class="panel bio-panel">
+        <p class="eyebrow">Bio card</p>
+        <h2>About</h2>
+        <p id="aboutText">A classic-profile home base for gaming, links, experiments, and stylish internet fingerprints. Clean, cinematic, retro, and made to be edited anytime.</p>
+        <div class="quote-box" id="movieQuote">"Roads? Where this profile goes, it still respects responsive design."</div>
+      </div>
+
+      <div class="panel age-panel">
+        <p class="eyebrow">Born December 1, 2008</p>
+        <h2>Live Age Counter</h2>
+        <div class="age-clock" aria-live="polite">
+          <div><strong id="years">--</strong><span>Years</span></div>
+          <div><strong id="days">--</strong><span>Days</span></div>
+          <div><strong id="hours">--</strong><span>Hours</span></div>
+          <div><strong id="minutes">--</strong><span>Minutes</span></div>
+          <div><strong id="seconds">--</strong><span>Seconds</span></div>
+        </div>
+        <p class="small-note" id="exactAgeText">Counting every second since birthday.</p>
+      </div>
+    </section>
+
+    <section class="section reveal" id="links">
+      <div class="section-heading">
+        <p class="eyebrow">Link district</p>
+        <h2>Profiles and Places</h2>
+      </div>
+      <div class="link-grid" id="linkGrid"></div>
+    </section>
+
+    <section class="section reveal" id="games">
+      <div class="section-heading">
+        <p class="eyebrow">Gaming garage</p>
+        <h2>Gaming Profile</h2>
+      </div>
+      <div class="garage">
+        <div class="panel stat-card">
+          <span>Favorite vibe</span><strong>Open-world classics</strong>
+        </div>
+        <div class="panel stat-card">
+          <span>Driving style</span><strong>Fast, dramatic, barely legal in pixels</strong>
+        </div>
+        <div class="panel stat-card">
+          <span>Current mission</span><strong>Build the cleanest profile page</strong>
+        </div>
+        <div class="panel stat-card">
+          <span>Secret skill</span><strong>Finding hidden buttons</strong>
+        </div>
+      </div>
+      <div class="wanted-board panel">
+        <div>
+          <p class="eyebrow">Classic game references</p>
+          <h3>Mission Board</h3>
+        </div>
+        <ul id="missionList"></ul>
+      </div>
+    </section>
+
+    <section class="section reveal" id="arcade">
+      <div class="section-heading">
+        <p class="eyebrow">Mini arcade</p>
+        <h2>Play Zone</h2>
+      </div>
+      <div class="arcade-grid">
+        <article class="game-cabinet wide">
+          <div class="cabinet-header">
+            <h3>Car Runner</h3>
+            <span id="carScore">Score 0</span>
+          </div>
+          <canvas id="carGame" width="600" height="260" aria-label="Car runner game"></canvas>
+          <div class="game-controls">
+            <button class="button tiny" id="carStart" type="button">Start</button>
+            <button class="button tiny" id="carLeft" type="button">Left</button>
+            <button class="button tiny" id="carRight" type="button">Right</button>
+          </div>
+        </article>
+
+        <article class="game-cabinet wide">
+          <div class="cabinet-header">
+            <h3>Bike Chase</h3>
+            <span id="bikeScore">Escape 0%</span>
+          </div>
+          <canvas id="bikeGame" width="600" height="260" aria-label="Bike chase game"></canvas>
+          <div class="game-controls">
+            <button class="button tiny" id="bikeStart" type="button">Start</button>
+            <button class="button tiny" id="bikeUp" type="button">Up</button>
+            <button class="button tiny" id="bikeDown" type="button">Down</button>
+          </div>
+        </article>
+
+        <article class="game-cabinet">
+          <div class="cabinet-header">
+            <h3>Reflex Reel</h3>
+            <span id="reflexBest">Best --</span>
+          </div>
+          <button class="reflex-pad" id="reflexPad" type="button">Wait for roll...</button>
+          <p class="small-note" id="reflexNote">Click start, then hit when the card flips.</p>
+          <button class="button tiny" id="reflexStart" type="button">Start</button>
+        </article>
+
+        <article class="game-cabinet">
+          <div class="cabinet-header">
+            <h3>Memory Match</h3>
+            <span id="memoryMoves">0 moves</span>
+          </div>
+          <div class="memory-grid" id="memoryGrid" aria-label="Memory match game"></div>
+          <button class="button tiny" id="memoryReset" type="button">Shuffle</button>
+        </article>
+
+        <article class="game-cabinet">
+          <div class="cabinet-header">
+            <h3>Classic Slots</h3>
+            <span id="slotResult">Insert luck</span>
+          </div>
+          <div class="slots" aria-label="Slot machine">
+            <span id="slot1">CAR</span><span id="slot2">VHS</span><span id="slot3">BIKE</span>
+          </div>
+          <button class="button tiny" id="slotSpin" type="button">Spin</button>
+        </article>
+
+        <article class="game-cabinet">
+          <div class="cabinet-header">
+            <h3>Cheat Code</h3>
+            <span id="codeStatus">Locked</span>
+          </div>
+          <p class="small-note">Type the classic code anywhere on the page.</p>
+          <div class="code-led" id="codeLed">UP UP DOWN DOWN LEFT RIGHT LEFT RIGHT B A</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal" id="easter">
+      <div class="section-heading">
+        <p class="eyebrow">Secret shelf</p>
+        <h2>Easter Eggs</h2>
+      </div>
+      <div class="secret-grid">
+        <button class="secret-tile" data-secret="poster" type="button">Old Poster</button>
+        <button class="secret-tile" data-secret="taxi" type="button">Taxi Meter</button>
+        <button class="secret-tile" data-secret="radio" type="button">Silent Radio</button>
+        <button class="secret-tile" data-secret="clap" type="button">Clapperboard</button>
+      </div>
+      <p class="hint">Hints: try the title, try the profile image, try the old console code, and tap the mystery tiles.</p>
+    </section>
+  </main>
+
+  <aside class="toast" id="toast" aria-live="polite"></aside>
+
+  <footer class="footer">
+    <span>Built like a classic cartridge. Edit links, text, and games in <strong>script.js</strong>.</span>
+    <button class="back-top" id="backTop" type="button">Top</button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
