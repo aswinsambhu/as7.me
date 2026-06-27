@@ -32,7 +32,6 @@ const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
 
 const loader = $("#loader");
-const loaderVideo = $("#loaderVideo");
 const loaderPercent = $("#loaderPercent");
 const skipLoader = $("#skipLoader");
 const toast = $("#toast");
@@ -63,9 +62,7 @@ function bootLoader() {
     loaderPercent.textContent = "100%";
     setTimeout(hideLoader, 450);
   };
-
-  loaderVideo.addEventListener("ended", finish, { once: true });
-  loaderVideo.addEventListener("error", finish, { once: true });
+setTimeout(finish, 2500);
   skipLoader.addEventListener("click", finish);
 
   setTimeout(() => {
